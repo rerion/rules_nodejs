@@ -226,6 +226,7 @@ def _run_tsc(ctx, input, output):
     args = ctx.actions.args()
     args.add_all(["--target", "es5"])
     args.add("--allowJS")
+    args.add("--skipLibCheck")
     args.add(input.path)
     args.add_all(["--outFile", output.path])
 
